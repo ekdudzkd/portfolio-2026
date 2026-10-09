@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>공구한 — Dayoung's Web Portfolio</title>
+    <meta
+      name="description"
+      content="구매와 판매 경험을 연결하는 공동구매 웹사이트 공구한의 디자인과 구현 기록"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css?v=pretendard-local" />
+    <link rel="stylesheet" href="css/groupbuy.css" />
+    <link rel="stylesheet" href="css/case-editorial.css" />
+    <link rel="stylesheet" href="css/groupbuy-motion.css" />
+    <script src="js/groupbuy-motion.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap"
+    />
+  </head>
+  <body class="groupbuy-page">
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html">Dayoung's Web Portfolio</a>
+        <nav aria-label="프로젝트 메뉴"><a href="index.html#projects">전체 프로젝트 ↗</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="gb-cover">
+        <div class="container">
+          <a class="gb-back" href="index.html#projects">← 뒤로가기</a>
+          <p class="eyebrow">OVERVIEW</p>
+          <div class="gb-cover-heading">
+            <div>
+              <h1 class="groupbuy-logo">공구한</h1>
+              <p class="gb-subtitle">한층 더 쉬워진<br />공동구매 경험</p>
+            </div>
+            <div class="gb-cover-overview">
+              <dl class="gb-meta">
+                <div>
+                  <dt>기간</dt>
+                  <dd>2026.08.18 – 2026.09.28<br /></dd>
+                </div>
+                <div>
+                  <dt>팀</dt>
+                  <dd>6명 · BE 3 / FE 1 / 팀장 1 / AI 1</dd>
+                </div>
+                <div>
+                  <dt>담당</dt>
+                  <dd>UI/UX · 웹디자인 · 웹 퍼블리싱 · 화면 구현</dd>
+                </div>
+                <div>
+                  <dt>환경</dt>
+                  <dd>반응형 웹 · React · TypeScript · HTML/CSS</dd>
+                </div>
+                <div>
+                  <dt>도구</dt>
+                  <dd>Figma · GitLab · Jira · Claude Code</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <figure class="gb-image">
+            <video
+              class="gb-banner-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              poster="assets/images/projects/01_group-buying/08-screenshots.png"
+              aria-label="공구한 서비스 배너 영상"
+            >
+              <source src="assets/videos/projects/01_group-buying/banner.mp4" type="video/mp4" />
+              브라우저가 영상 재생을 지원하지 않습니다.
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="gb-problem" aria-labelledby="problem-title">
+        <div class="container">
+          <p class="eyebrow">01 / PROBLEM</p>
+          <h2 id="problem-title">공동구매는 왜<br />여러 플랫폼을 오가야 할까요?</h2>
+          <p class="gb-problem-lead">
+            상품을 발견하는 곳과 구매하는 곳이 다르면, 쇼핑의 흐름도 끊어집니다.<br />
+            늘어나는 인플루언서들과 공동구매에 비해 존재하지 않는 별도의 플랫폼을 문제로
+            정의하였습니다.
+          </p>
+          <div class="gb-problem-list">
+            <article>
+              <span>01</span>
+              <h3>분산된 구매 과정</h3>
+              <p>
+                SNS를 통해 연결된 별도의 쇼핑 사이트와 외부 링크를 오가며 상품을 탐색하고 구매해야
+                합니다.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>낯선 공동구매 경험</h3>
+              <p>일반 쇼핑몰처럼 편하게 상품을 둘러보고 구매할 수 있는 경험이 부족합니다.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>분리된 사용자 역할</h3>
+              <p>일반적으로 판매자 사이트는 구매자가 보는 화면과 분리되어 있습니다.</p>
+            </article>
+          </div>
+          <div class="gb-design-direction">
+            <div class="gb-direction">
+              <span class="eyebrow">02 / DESIGN DIRECTION</span>
+              <p>익숙하게 둘러보고<br />자연스럽게 판매까지</p>
+              <span>구매와 판매를 하나의 흐름으로 연결합니다.</span>
+            </div>
+            <section id="service-flow" class="gb-flow" aria-label="공구한 서비스 플로차트">
+              <h3 class="gb-design-subtitle">Flowchart</h3>
+              <div
+                class="gb-flow-canvas"
+                tabindex="0"
+                role="region"
+                aria-label="서비스 흐름도, 작은 화면에서는 좌우로 이동할 수 있습니다"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1200 850"
+                  role="img"
+                  aria-labelledby="gb-flow-title gb-flow-desc"
+                  class="gb-flow-diagram"
+                >
+                  <title id="gb-flow-title">공구한 서비스 플로차트</title>
+                  <desc id="gb-flow-desc">
+                    홈에서 상품 탐색, 찜, 마이페이지, 판매자센터로 분기합니다. 구매는 상세 화면,
+                    로그인 확인, 배송지, 결제, 주문 완료로 이어집니다. 판매자 인증을 마치면 상품
+                    등록, 선택적인 AI 정보 입력과 검토, 공동구매 개설 및 판매 관리를 진행합니다.
+                  </desc>
+                  <defs>
+                    <marker
+                      id="gb-flow-arrow"
+                      viewBox="0 0 10 10"
+                      refX="9"
+                      refY="5"
+                      markerWidth="6"
+                      markerHeight="6"
+                      orient="auto-start-reverse"
+                    >
+                      <path d="M0 0L10 5L0 10Z" fill="#aab4c1" />
+                    </marker>
+                    <marker
+                      id="gb-flow-blue-arrow"
+                      viewBox="0 0 10 10"
+                      refX="9"
+                      refY="5"
+                      markerWidth="6"
+                      markerHeight="6"
+                      orient="auto-start-reverse"
+                    >
+                      <path d="M0 0L10 5L0 10Z" fill="#6490ce" />
+                    </marker>
+                  </defs>
+                  <style>
+                    .flow-edge {
+                      fill: none;
+                      stroke: #aab4c1;
+                      stroke-width: 1.3;
+                      stroke-dasharray: 3 4;
+                      marker-end: url(#gb-flow-arrow);
+                    }
+                    .flow-edge.blue {
+                      stroke: #6490ce;
+                      marker-end: url(#gb-flow-blue-arrow);
+                    }
+                    .flow-node {
+                      fill: #fff;
+                      stroke: #c5ccd5;
+                      stroke-width: 1.2;
+                    }
+                    .flow-node.main {
+                      fill: #e1eafb;
+                      stroke: none;
+                    }
+                    .flow-node.sub {
+                      fill: #edf2fa;
+                      stroke: none;
+                    }
+                    .flow-node.end {
+                      fill: #f0f2f5;
+                      stroke: none;
+                    }
+                    .flow-label {
+                      font-family: Pretendard, "Malgun Gothic", sans-serif;
+                      font-size: 15px;
+                      fill: #566375;
+                      text-anchor: middle;
+                    }
+                    .flow-label.main {
+                      fill: #4678bb;
+                      font-weight: 600;
+                    }
+                    .flow-note {
+                      font-family: Pretendard, "Malgun Gothic", sans-serif;
+                      font-size: 11px;
+                      fill: #788698;
+                      text-anchor: middle;
+                    }
+                  </style>
+                  <path class="flow-edge" d="M590 94V150H110V210" />
+                  <path class="flow-edge" d="M590 150H350V210" />
+                  <path class="flow-edge" d="M590 150V210" />
+                  <path class="flow-edge" d="M590 150H1070V210" />
+                  <path class="flow-edge" d="M110 254V300" />
+                  <path class="flow-edge" d="M110 344V390" />
+                  <path class="flow-edge blue" d="M110 434V480" />
+                  <text class="flow-note" x="165" y="461">로그인 상태</text>
+                  <path class="flow-edge" d="M110 524V570" />
+                  <path class="flow-edge" d="M110 614V660" />
+                  <path class="flow-edge blue" d="M190 412H270" />
+                  <text class="flow-note" x="230" y="401">미로그인</text>
+                  <path class="flow-edge blue" d="M350 434V453H220V502H190" />
+                  <text class="flow-note" x="320" y="470">로그인 후 복귀</text>
+                  <path class="flow-edge" d="M590 254V300" />
+                  <path class="flow-edge" d="M590 344V390" />
+                  <path class="flow-edge" d="M590 434V480" />
+                  <path class="flow-edge" d="M590 524V570" />
+                  <path class="flow-edge" d="M670 502H700V682H670" />
+                  <path class="flow-edge" d="M700 682V772H670" />
+                  <path class="flow-edge blue" d="M1070 254V300" />
+                  <text class="flow-note" x="1125" y="285">로그인 필요</text>
+                  <path class="flow-edge blue" d="M990 322H910" />
+                  <text class="flow-note" x="950" y="310">인증 전</text>
+                  <path class="flow-edge blue" d="M1070 344V390" />
+                  <text class="flow-note" x="1120" y="372">인증 완료</text>
+                  <path class="flow-edge blue" d="M830 344V370H950V412H990" />
+                  <path class="flow-edge" d="M1070 434V456H830V480" />
+                  <path class="flow-edge" d="M1070 456V480" />
+                  <path class="flow-edge" d="M830 524V570" />
+                  <path class="flow-edge" d="M830 614V660" />
+                  <path class="flow-edge" d="M830 704V750" />
+                  <rect class="flow-node main" x="510" y="50" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="590" y="77">공구한 홈</text>
+                  <text class="flow-note" x="590" y="111">/</text>
+                  <rect class="flow-node main" x="30" y="210" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="110" y="237">상품 탐색</text>
+                  <rect class="flow-node main" x="270" y="210" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="350" y="237">찜한 상품</text>
+                  <text class="flow-note" x="350" y="271">로그인 필요</text>
+                  <rect class="flow-node main" x="510" y="210" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="590" y="237">마이페이지</text>
+                  <text class="flow-note" x="590" y="271">로그인 필요</text>
+                  <rect class="flow-node main" x="990" y="210" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="1070" y="237">판매자센터 진입</text>
+                  <rect class="flow-node sub" x="30" y="300" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="110" y="327">상품 상세</text>
+                  <rect class="flow-node" x="30" y="390" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="110" y="417">로그인 여부 확인</text>
+                  <rect class="flow-node" x="270" y="390" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="350" y="417">로그인 / 회원가입</text>
+                  <rect class="flow-node" x="30" y="480" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="110" y="507">배송지 입력</text>
+                  <rect class="flow-node" x="30" y="570" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="110" y="597">결제</text>
+                  <rect class="flow-node end" x="30" y="660" width="160" height="44" rx="8" />
+                  <text class="flow-label end" x="110" y="687">주문 완료</text>
+                  <rect class="flow-node sub" x="510" y="300" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="590" y="327">내 정보 확인</text>
+                  <rect class="flow-node sub" x="510" y="390" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="590" y="417">주문 내역</text>
+                  <rect class="flow-node" x="510" y="480" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="590" y="507">주문 상세</text>
+                  <rect class="flow-node" x="510" y="570" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="590" y="597">구매 확정</text>
+                  <rect class="flow-node" x="510" y="660" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="590" y="687">반품 신청</text>
+                  <rect class="flow-node" x="510" y="750" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="590" y="777">분쟁 신청</text>
+                  <rect class="flow-node" x="990" y="300" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="1070" y="327">판매자 권한 확인</text>
+                  <rect class="flow-node sub" x="750" y="300" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="830" y="327">판매자 인증</text>
+                  <rect class="flow-node main" x="990" y="390" width="160" height="44" rx="8" />
+                  <text class="flow-label main" x="1070" y="417">판매자센터</text>
+                  <text class="flow-note" x="1070" y="451">/seller</text>
+                  <rect class="flow-node sub" x="750" y="480" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="830" y="507">상품 등록</text>
+                  <rect class="flow-node sub" x="990" y="480" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="1070" y="507">판매 관리</text>
+                  <text class="flow-note" x="1070" y="541">공동구매 · 주문 · 반품 · 정산</text>
+                  <rect class="flow-node sub" x="750" y="570" width="160" height="44" rx="8" />
+                  <text class="flow-label sub" x="830" y="597">AI 정보 입력 / 검토</text>
+                  <text class="flow-note" x="830" y="631">상품 등록 화면 내 선택 기능</text>
+                  <rect class="flow-node" x="750" y="660" width="160" height="44" rx="8" />
+                  <text class="flow-label" x="830" y="687">공동구매 개설</text>
+                  <rect class="flow-node end" x="750" y="750" width="160" height="44" rx="8" />
+                  <text class="flow-label end" x="830" y="777">등록 완료</text>
+                  <g transform="translate(950 60)">
+                    <rect class="flow-node main" width="28" height="9" rx="2" />
+                    <text class="flow-note" x="70" y="9">주요 화면</text>
+                    <rect class="flow-node sub" y="24" width="28" height="9" rx="2" />
+                    <text class="flow-note" x="70" y="33">세부 기능</text>
+                    <path class="flow-edge blue" d="M0 55H28" />
+                    <text class="flow-note" x="70" y="59">조건 분기</text>
+                  </g>
+                </svg>
+              </div>
+            </section>
+            <section id="wireframes" class="gb-wireframes" aria-labelledby="wireframes-title">
+              <h3 id="wireframes-title" class="gb-design-subtitle">Initial Wireframes</h3>
+              <section class="gb-wireframe-group" aria-labelledby="wireframes-buyer">
+                <div class="gb-wireframe-grid">
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/01_main.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="홈 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/01_main.png"
+                        alt="홈 초기 와이어프레임"
+                        width="1440"
+                        height="1605"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/03_product.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="상품 상세 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/03_product.png"
+                        alt="상품 상세 초기 와이어프레임"
+                        width="1440"
+                        height="1678"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/05_checkout.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="구매페이지 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/05_checkout.png"
+                        alt="구매페이지 초기 와이어프레임"
+                        width="1440"
+                        height="983"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                </div>
+              </section>
+              <section class="gb-wireframe-group" aria-labelledby="wireframes-seller">
+                <div class="gb-wireframe-grid">
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/S2_seller_product_new.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="사진 등록 · 상품 입력 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/S2_seller_product_new.png"
+                        alt="사진 등록 · 상품 입력 초기 와이어프레임"
+                        width="1440"
+                        height="2097"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/S4_seller_home.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="판매자센터 홈 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/S4_seller_home.png"
+                        alt="판매자센터 홈 초기 와이어프레임"
+                        width="1440"
+                        height="1276"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                  <figure>
+                    <a
+                      class="gb-wireframe-preview"
+                      href="assets/images/projects/01_group-buying/wireframes/S7_seller_settlement.png"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="정산 관리 초기 와이어프레임 전체 보기, 새 창"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/wireframes/S7_seller_settlement.png"
+                        alt="정산 관리 초기 와이어프레임"
+                        width="1440"
+                        height="2296"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                </div>
+              </section>
+            <div class="gb-prototype-source">
+              <a href="https://github.com/ekdudzkd/group-buying-prototype" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+            </section>
+            <section
+              id="design-system"
+              class="gb-design-system"
+              aria-labelledby="design-system-title"
+            >
+              <h3 id="design-system-title" class="gb-design-subtitle">Design System</h3>
+              <div class="gb-system-grid">
+                <section class="gb-system-panel" aria-labelledby="gb-color-title">
+                  <div class="gb-system-main">
+                    <h4 id="gb-color-title">Color</h4>
+                    <p class="gb-system-description">
+                      파란색으로 주요 행동과 진행 상태를 강조하고, 회색 계열로 정보와 화면 영역을
+                      구분했습니다.
+                    </p>
+                    <ul class="gb-color-palette" aria-label="공구한 주요 색상">
+                      <li class="gb-color-chip gb-color-primary">
+                        <span>Aqua · Primary</span><code>#428DFF</code>
+                      </li>
+                      <li class="gb-color-chip gb-color-dark">
+                        <span>Dark Blue · Hover</span><code>#0043CE</code>
+                      </li>
+                      <li class="gb-color-chip gb-color-ink">
+                        <span>Gray · Text</span><code>#3C4043</code>
+                      </li>
+                      <li class="gb-color-chip gb-color-soft">
+                        <span>Gray · Background</span><code>#F8F9FA</code>
+                      </li>
+                      <li class="gb-color-chip gb-color-line">
+                        <span>Gray · Border</span><code>#DADCE0</code>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="gb-icon-specimen" aria-label="상품 카테고리 아이콘 예시">
+                    <h4>Category Icons</h4>
+                    <ul class="gb-category-icons">
+                      <li aria-label="디지털기기">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="7" y="2.5" width="10" height="19" rx="2" />
+                            <line x1="10.5" y1="18.5" x2="13.5" y2="18.5" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="생활가전">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="4" y="3" width="16" height="18" rx="2" />
+                            <circle cx="12" cy="13.5" r="4" />
+                            <line x1="7" y1="6.5" x2="9" y2="6.5" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="가구/인테리어">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 17v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6" />
+                            <rect x="3" y="17" width="18" height="3.5" rx="1" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="여성잡화">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 8h16l-1.2 12H5.2z" />
+                            <path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="뷰티/미용">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="9" y="10" width="6" height="11" rx="1" />
+                            <path d="M10 10V5l4-2v7" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="생활/주방">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 9h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z" />
+                            <line x1="2.5" y1="11" x2="5" y2="11" />
+                            <line x1="19" y1="11" x2="21.5" y2="11" /></svg
+                        ></span>
+                      </li>
+                      <li aria-label="식물">
+                        <span class="gb-category-icon"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <line x1="12" y1="21" x2="12" y2="12" />
+                            <path d="M12 13c0-4 3-6.5 6.5-6.5C18.5 10.5 15.5 13 12 13z" />
+                            <path d="M12 16c0-3-2.5-5.5-5.5-5.5C6.5 13.5 9 16 12 16z" /></svg
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section class="gb-system-panel" aria-labelledby="gb-type-title">
+                  <div class="gb-system-main">
+                    <h4 id="gb-type-title">Typography</h4>
+                    <div class="gb-type-specimen">
+                      <div class="gb-type-row">
+                        <span class="gb-type-meta">Title<small>Bold / 22px</small></span>
+                        <p class="gb-type-title">함께 구매하는 즐거움</p>
+                      </div>
+                      <div class="gb-type-row">
+                        <span class="gb-type-meta">Body<small>Regular / 14px</small></span>
+                        <p class="gb-type-body">필요한 사람끼리 모여 더 싸게 구매해요.</p>
+                      </div>
+                      <div class="gb-type-row">
+                        <span class="gb-type-meta">Caption<small>Regular / 12px</small></span>
+                        <p class="gb-type-caption">상품 정보와 공동구매 조건을 확인하세요.</p>
+                      </div>
+                    </div>
+                    <div class="gb-status-specimen" aria-label="상태 칩 예시">
+                      <h4>State Chips</h4>
+                      <ul class="gb-status-chips">
+                        <li class="gb-status-chip gb-status-blue">모집중</li>
+                        <li class="gb-status-chip gb-status-orange">마감임박</li>
+                        <li class="gb-status-chip gb-status-green">배송완료</li>
+                        <li class="gb-status-chip gb-status-green">정산완료</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="gb-icon-specimen" aria-label="공구한 서비스 아이콘 예시">
+                    <h4>Icons</h4>
+                    <ul class="gb-system-icons">
+                      <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M12 20.3 4.6 13a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8A4.7 4.7 0 0 1 19.4 13z"
+                          /></svg
+                        ><span>찜</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M6 3h9l3 3v15H6z" />
+                          <polyline points="14.5 3 14.5 6.5 18 6.5" />
+                          <path d="M9 11h6M9 14.5h6M9 18h3.5" /></svg
+                        ><span>주문현황</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <circle cx="12" cy="8" r="3.6" />
+                          <path d="M4.8 20.5c0-3.7 3.2-6.2 7.2-6.2s7.2 2.5 7.2 6.2" /></svg
+                        ><span>내 정보</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M18 16.5V11a6 6 0 0 0-12 0v5.5L4.5 18.5h15zM10 21.2a2.2 2.2 0 0 0 4 0"
+                          /></svg
+                        ><span>알림</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="gb-solutions" aria-labelledby="solution-title">
+        <div class="container">
+          <div class="gb-section-intro">
+            <p class="eyebrow">03 / SOLUTION</p>
+            <h2 id="solution-title">한 페이지 안에서<br />끊기지 않는 쇼핑</h2>
+          </div>
+          <article class="gb-feature">
+            <div class="gb-feature-preview">
+              <div class="gb-feature-copy">
+                <span class="gb-feature-number">01</span>
+                <div>
+                  <h3>익숙한 방식으로 상품을 탐색</h3>
+                  <p>
+                    쇼핑몰의 UI로 공동구매를 부담 없이 이용하도록 구성했습니다.<br />
+                    목록에서 상품을 비교하고 상세 화면에서 구매 정보를 확인하는 흐름입니다.
+                  </p>
+                </div>
+              </div>
+              <figure class="gb-image">
+                <a
+                  href="assets/images/projects/01_group-buying/group-buy_products.gif"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="assets/images/projects/01_group-buying/group-buy_products.gif"
+                    alt="상품 목록에서 상품을 탐색하고 상세 정보를 확인하는 과정"
+                    loading="lazy"
+                    decoding="async"
+                /></a>
+              </figure>
+            </div>
+            <div class="gb-screen-stack gb-screen-stack-centered">
+              <div class="gb-screen-row">
+                <figure class="gb-image gb-product-nav-image">
+                  <div class="gb-product-nav-zoom" aria-hidden="true">
+                    <svg
+                      viewBox="330 25 2200 490"
+                      xmlns="http://www.w3.org/2000/svg"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/images/projects/01_group-buying/products.png"
+                        width="2845"
+                        height="1523"
+                      />
+                    </svg>
+                  </div>
+                  <a
+                    href="assets/images/projects/01_group-buying/products.png"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="assets/images/projects/01_group-buying/products.png"
+                      alt="공구한 상품 목록 화면"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption class="gb-product-nav-note">
+                    카테고리별로 쉽게 분류해서 볼 수 있도록 상단에 아이콘 형태로 배치
+                  </figcaption>
+                  <div class="gb-product-gauge-zoom" aria-hidden="true">
+                    <svg
+                      viewBox="1440 710 540 810"
+                      xmlns="http://www.w3.org/2000/svg"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/images/projects/01_group-buying/products.png"
+                        width="2845"
+                        height="1523"
+                      />
+                    </svg>
+                  </div>
+                  <figcaption class="gb-product-gauge-note">
+                    현재 참여 인원을 직관적으로 확인할 수 있는 게이지 바
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gb-wishlist-flow">
+                <div class="gb-wishlist-arrow" aria-hidden="true">
+                  <span class="gb-wishlist-line-start"></span>
+                  <span class="gb-wishlist-line-cross"></span>
+                  <span class="gb-wishlist-line-end"></span>
+                </div>
+                <p class="gb-wishlist-note">마음에 드는 상품을 한눈에</p>
+                <div class="gb-screen-row">
+                  <figure class="gb-image">
+                    <a
+                      href="assets/images/projects/01_group-buying/product.png"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/product.png"
+                        alt="공구한 상품 상세 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                </div>
+                <div class="gb-screen-row">
+                  <figure class="gb-image">
+                    <a
+                      href="assets/images/projects/01_group-buying/likes.png"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="assets/images/projects/01_group-buying/likes.png"
+                        alt="공구한 찜한 상품 목록 화면"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gb-feature">
+            <div class="gb-feature-copy gb-seller-copy">
+              <span class="gb-feature-number">02</span>
+              <div>
+                <h3>구매하는 사람에서<br />판매하는 사람으로</h3>
+
+                <div class="gb-seller-preview">
+                  <div>
+                    <table class="gb-route-table">
+                      <caption>
+                        주요 URL 구조
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">화면</th>
+                          <th scope="col">경로</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">홈</th>
+                          <td><code>/</code></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">상품 목록</th>
+                          <td><code>/group-buys</code></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">판매자센터</th>
+                          <td>
+                            <code>/<span class="gb-route-prefix">seller</span></code>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">판매자 · 상품 등록</th>
+                          <td>
+                            <code>/<span class="gb-route-prefix">seller/</span>products/new</code>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="gb-route-note">
+                      모든 화면은 같은 도메인 안에서 연결되며, 판매자센터는 하위 경로인
+                      <code>/<span class="gb-route-prefix">seller</span></code
+                      >로 진입합니다. 구매와 판매 목적에 맞게 화면을 구분하되, 하나의 계정으로
+                      이용할 수 있도록 설계하였습니다.
+                    </p>
+                  </div>
+                  <figure class="gb-image gb-gif-compact">
+                    <a
+                      href="assets/images/projects/01_group-buying/seller.gif"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="assets/images/projects/01_group-buying/seller.gif"
+                        alt="판매자센터에서 상품을 등록하는 과정"
+                        loading="lazy"
+                        decoding="async"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="gb-screen-stack">
+              <div class="gb-screen-row">
+                <figure id="seller-step" class="gb-image gb-seller-step-image">
+                  <div class="gb-seller-step-zoom" aria-hidden="true">
+                    <svg
+                      viewBox="70 260 2020 245"
+                      xmlns="http://www.w3.org/2000/svg"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/images/projects/01_group-buying/seller_bar.png"
+                        width="2157"
+                        height="1528"
+                      />
+                    </svg>
+                  </div>
+                  <a
+                    href="assets/images/projects/01_group-buying/seller_bar.png"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="assets/images/projects/01_group-buying/seller_bar.png"
+                      alt="판매자 전환 화면: 상단 단계 표시로 현재 이용 동의 단계와 남은 절차를 안내합니다"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption class="gb-seller-annotation gb-seller-progress-note">
+                    사용자가 진행률을 알 수 있도록 현재 단계를 표시
+                  </figcaption>
+                  <figcaption class="gb-seller-annotation gb-seller-read-note">
+                    바로 체크할 수 없게하여 사용자가 이용 약관을 읽도록 유도
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="gb-screen-row">
+                <figure class="gb-image gb-seller-check-image">
+                  <a
+                    href="assets/images/projects/01_group-buying/seller_check.png"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="assets/images/projects/01_group-buying/seller_check.png"
+                      alt="공구한 판매자 전환 확인 화면"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption class="gb-seller-annotation gb-seller-check-note">
+                    스크롤이 바닥에 닿은 시점부터 체크박스 활성화
+                  </figcaption>
+                  <figcaption class="gb-seller-annotation gb-seller-submit-note">
+                    모든 체크박스가 확인되어야 활성화되는 다음 버튼
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gb-ai gb-ai-matched">
+          <div class="container">
+            <div class="gb-feature-preview">
+              <div class="gb-feature-copy">
+                <span class="gb-feature-number">03</span>
+                <div>
+                  <h3>반복되는 작성은 줄이고<br />마지막 판단은 판매자에게</h3>
+                  <p>
+                    AI가 상품 정보를 분석해 상품 설명 초안을 생성합니다.<br />판매자가 직접 수정할
+                    수 있도록 하여 자동화의 편리함과 사용자 제어를<br />함께 고려했습니다.
+                  </p>
+                </div>
+              </div>
+              <figure class="gb-image gb-gif-compact">
+                <a
+                  href="assets/images/projects/01_group-buying/seller_ai.gif"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/images/projects/01_group-buying/seller_ai.gif"
+                    alt="AI가 상품 설명 초안을 생성하고 판매자가 내용을 확인하는 과정"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+            <div class="gb-screen-stack">
+              <div class="gb-screen-row">
+                <figure class="gb-image gb-ai-analysis-image">
+                  <a
+                    href="assets/images/projects/01_group-buying/seller_ai.png"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="assets/images/projects/01_group-buying/seller_ai.png"
+                      alt="공구한 AI 상품 설명 생성 및 수정 화면"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <div class="gb-ai-analysis-connector" aria-hidden="true"></div>
+                  <figcaption class="gb-ai-analysis-note">
+                    AI가 이미지를 분석하여 설명란을 채워줍니다. 생성하는 데 약간의 시간이 소요되어
+                    사용자가 알 수 있도록 안내합니다.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gb-demo container" aria-labelledby="demo-title">
+        <p class="eyebrow">04 / SERVICE DEMO</p>
+        <h2 id="demo-title">서비스 시연 영상</h2>
+        <video
+          class="gb-demo-video"
+          controls
+          preload="none"
+          playsinline
+          poster="assets/images/projects/01_group-buying/main.png"
+          aria-label="공구한 서비스 전체 시연 영상"
+        >
+          <source src="assets/videos/projects/01_group-buying/test_edit.mp4" type="video/mp4" />
+          영상을 재생할 수 없는 환경입니다.
+          <a href="assets/videos/projects/01_group-buying/test_edit.mp4">시연 영상 보기</a>
+        </video>
+        <div class="gb-demo-chapters" role="group" aria-label="시연 영상 구간 바로 재생">
+          <button type="button" data-demo-time="0"><span>0:00</span>로그인 및 회원가입</button>
+          <button type="button" data-demo-time="48"><span>0:48</span>둘러보기</button>
+          <button type="button" data-demo-time="59"><span>0:59</span>결제</button>
+          <button type="button" data-demo-time="88"><span>1:28</span>거래 현황</button>
+          <button type="button" data-demo-time="98"><span>1:38</span>판매자센터 첫 인증</button>
+          <button type="button" data-demo-time="142"><span>2:22</span>AI 상품 등록 기능</button>
+        </div>
+        <p class="gb-demo-copy">
+          <a href="https://j15b205.p.ssafy.io/" target="_blank" rel="noopener">j15b205.p.ssafy.io</a
+          >에 배포하여 2026년 9월 27일까지 운영했습니다.<br />
+          금융망 및 백엔드 API를 연동했으며, 실제 배포 환경에서 AI 기능까지 동작하도록 구현했습니다.
+        </p>
+      </section>
+      <div class="gb-closing-background">
+        <section class="gb-result container" aria-labelledby="result-title">
+          <p class="eyebrow">05 / RESULT & CONTRIBUTION</p>
+          <h2 id="result-title">디자인에서 화면 구현까지,<br />하나의 흐름을 만들었습니다.</h2>
+          <div class="gb-result-grid">
+            <div>
+              <h3>제가 맡은 작업</h3>
+              <ul>
+                <li>전반적인 UI/UX 및 웹디자인, 화면 설계</li>
+                <li>프로토타입 생성·수정과 UI/UX 개선</li>
+                <li>Figma 디자인 컴포넌트 정리</li>
+                <li>Claude Code를 활용한 React 기반 화면 구현</li>
+                <li>웹 퍼블리싱 및 백엔드와 API 연동 협업</li>
+              </ul>
+            </div>
+            <div>
+              <h3>회고</h3>
+              <div class="gb-retrospective-item">
+                <h4>명세서는 팀이 함께 지키는 기준</h4>
+                <p>
+                  아이디어를 그레이스케일 프로토타입으로 구현하며, 명세서는 작업 지시서이자
+                  백엔드·AI 담당 팀원들과의 약속이라는 점을 배웠습니다. 이를 기준으로 작업하고, 더
+                  나은 방향이 있다면 팀과 논의해 변경 사항을 명확히 기록하는 것이 중요합니다.
+                </p>
+              </div>
+              <div class="gb-retrospective-item">
+                <h4>같은 설명도 서로 다른 화면이 될 수 있습니다</h4>
+                <p>
+                  구매자 화면에 판매자센터를 연결하는 과정에서, 저는 쇼핑 중 판매자로 전환하는
+                  흐름을 생각했지만 백엔드 팀원은 첫 화면에서 역할을 선택하는 구조로 이해해 ERD를
+                  설계했습니다. 구매자가 판매에도 자연스럽게 참여할 수 있어야 한다는 사용자 관점과
+                  진입 흐름을 설명했고, 논의를 통해 관련 ERD 구조를 조정했습니다.
+                </p>
+                <p>
+                  구두 합의만으로는 같은 화면을 떠올린다고 확신할 수 없습니다. 프로토타입은 디자인을
+                  보여주는 도구를 넘어, 화면의 뼈대와 흐름을 함께 확인하고 합의하는 데 필요한 협업
+                  도구라는 점을 배웠습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="gb-records">
+            <div>
+              <p class="eyebrow">COLLABORATION</p>
+              <h3>변경을 공유하며 함께 작업했습니다.</h3>
+              <p>GitLab과 Jira를 활용한 작업 기록입니다.</p>
+            </div>
+            <div class="gb-collab-previews">
+              <button type="button" data-collab-dialog="gb-gitlab-dialog" aria-haspopup="dialog">
+                <img
+                  src="assets/images/projects/01_group-buying/05-collab.png"
+                  alt="GitLab 머지 요청 기록"
+                  loading="lazy"
+                />
+                <span>GitLab · 협업 기록 보기 ↗</span>
+              </button>
+              <button type="button" data-collab-dialog="gb-jira-dialog" aria-haspopup="dialog">
+                <img
+                  src="assets/images/projects/01_group-buying/07-collab.png"
+                  alt="Jira 스프린트 일정"
+                  loading="lazy"
+                />
+                <span>Jira · 작업 관리 보기 ↗</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="gb-end container">
+          <a href="index.html#projects">다른 프로젝트 살펴보기 ↗</a>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer container">
+      <span>© 2026 Dayoung</span><a href="#main">맨 위로 ↑</a>
+    </footer>
+    <dialog
+      id="gb-gitlab-dialog"
+      class="gb-collab-dialog"
+      aria-labelledby="gb-gitlab-dialog-title"
+      aria-describedby="gb-gitlab-dialog-copy"
+    >
+      <form method="dialog">
+        <button class="gb-dialog-close" aria-label="팝업 닫기">닫기 ×</button>
+      </form>
+      <h2 id="gb-gitlab-dialog-title">GitLab 협업 기록</h2>
+      <p id="gb-gitlab-dialog-copy">
+        브랜치와 머지 요청으로 화면 구현 및 수정 사항을 공유했습니다. 판매자 전환 화면의 변경 내용과
+        팀의 코드 병합 기록입니다.
+      </p>
+      <img
+        src="assets/images/projects/01_group-buying/01-collab.png"
+        alt="GitLab 프로젝트 저장소와 커밋 현황"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/projects/01_group-buying/02-collab.png"
+        alt="브랜치와 머지 요청을 공유한 GitLab 활동 기록"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/projects/01_group-buying/05-collab.png"
+        alt="판매자 전환 이용 동의 화면과 스크롤 개선 내용을 정리한 머지 요청"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/projects/01_group-buying/03-collab.png"
+        alt="프론트엔드·백엔드·AI 작업이 병합된 저장소 그래프"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/projects/01_group-buying/04-collab.png"
+        alt="기능별 브랜치와 코드 병합 이력이 정리된 저장소 그래프"
+        loading="lazy"
+      />
+    </dialog>
+    <dialog
+      id="gb-jira-dialog"
+      class="gb-collab-dialog"
+      aria-labelledby="gb-jira-dialog-title"
+      aria-describedby="gb-jira-dialog-copy"
+    >
+      <form method="dialog">
+        <button class="gb-dialog-close" aria-label="팝업 닫기">닫기 ×</button>
+      </form>
+      <h2 id="gb-jira-dialog-title">Jira 작업 관리</h2>
+      <p id="gb-jira-dialog-copy">
+        스프린트별로 작업을 나누고, 담당 업무와 진행 일정을 팀원들과 공유하며 관리했습니다.
+      </p>
+      <img
+        src="assets/images/projects/01_group-buying/06-collab.png"
+        alt="8월 스프린트와 작업 일정이 정리된 Jira 캘린더"
+        loading="lazy"
+      />
+      <img
+        src="assets/images/projects/01_group-buying/07-collab.png"
+        alt="9월 스프린트와 프론트엔드 작업 일정이 정리된 Jira 캘린더"
+        loading="lazy"
+      />
+    </dialog>
+    <script src="js/groupbuy-demo.js" defer></script>
+    <script src="js/groupbuy-collaboration.js" defer></script>
+  </body>
+</html>

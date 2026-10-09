@@ -1,0 +1,3 @@
+Raleway: https://github.com/google/fonts/tree/main/ofl/raleway (OFL)
+S-Core Dream: https://github.com/projectnoonnu/noonfonts_six/tree/1.2
+Paperlogy: https://github.com/fonts-archive/Paperlogy

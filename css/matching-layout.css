@@ -1,0 +1,213 @@
+.blind-case .blind-problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+}
+.blind-case .blind-problem-list {
+  display: grid;
+  justify-self: end;
+  width: max-content;
+  max-width: 100%;
+  gap: 32px;
+  padding-top: 48px;
+}
+.blind-case .blind-problem-list li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.blind-case .blind-problem-list p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #fff;
+}
+.blind-sad-icon {
+  width: 36px;
+  height: 36px;
+  stroke: #fff;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+.blind-design-direction {
+  margin: 64px auto 0;
+  max-width: 760px;
+  text-align: center;
+}
+.blind-direction-arrow {
+  width: 24px;
+  height: 100px;
+  margin-bottom: 28px;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+.blind-case .blind-design-direction h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.blind-design-direction p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.blind-flowchart {
+  margin: 56px 0 0;
+  padding: clamp(20px, 3vw, 40px);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.blind-flowchart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.blind-case .case-solution h3 {
+  font-size: 24px;
+}
+.blind-case .case-solution p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.blind-feature-media,
+.blind-demo-media {
+  background: rgba(232, 215, 224, 0.22);
+  border-radius: 16px;
+}
+.blind-feature-media {
+  min-height: 420px;
+}
+.blind-demo-media {
+  aspect-ratio: 16 / 9;
+}
+.blind-demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.blind-reflection-copy {
+  max-width: 850px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+.blind-reflection-copy p + p {
+  margin-top: 24px;
+}
+@media (max-width: 800px) {
+  .blind-case .blind-problem-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .blind-case .blind-problem-list {
+    padding-top: 0;
+    justify-self: start;
+    width: 100%;
+  }
+  .blind-feature-media {
+    min-height: 280px;
+  }
+}
+.blind-case .blind-cover-overview {
+  margin-top: 48px;
+  max-width: 760px;
+}
+.blind-case .blind-cover-overview h2 {
+  margin-top: 24px;
+  font-size: clamp(23px, 2.5vw, 30px);
+  color: #fff;
+}
+.blind-case .blind-cover-overview h1 {
+  margin-top: 28px;
+}
+.blind-case .blind-cover-overview .gb-meta {
+  margin-top: 36px;
+  max-width: 560px;
+}
+.blind-case .blind-cover-overview .gb-meta > div {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.blind-case .blind-cover-overview .project-resources {
+  margin-top: 28px;
+}
+.blind-case {
+  --color-muted: #fff;
+  --orb-5: #f3ffe7;
+  --orb-6: #f2dbae;
+}
+.blind-case .blind-bg-frame .blind-orb-3,
+.blind-case .blind-bg-frame .blind-orb-4 {
+  opacity: 0.8;
+}
+.blind-case .gb-back,
+.blind-case .gb-meta dt,
+.blind-case .case-copy p,
+.blind-case .site-footer {
+  color: #fff;
+}
+.blind-case .blind-swipe-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+}
+.blind-case .blind-swipe-feature > .case-copy {
+  margin-bottom: 0;
+}
+.blind-swipe-feature .case-copy p + p {
+  margin-top: 16px;
+}
+.blind-swipe-video {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  justify-self: center;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+@media (max-width: 800px) {
+  .blind-case .blind-swipe-feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.blind-screen-gallery {
+  padding-block: 32px 64px;
+}
+.blind-screen-gallery h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.blind-screen-strip {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 24px 24px 36px;
+  scrollbar-color: #fff transparent;
+}
+.blind-mobile-screen {
+  flex: 0 0 210px;
+  width: 210px;
+  aspect-ratio: 390 / 844;
+  margin: 0;
+  background: #fff;
+  padding-block: 8px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.blind-mobile-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}

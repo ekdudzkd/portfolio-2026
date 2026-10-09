@@ -1,0 +1,3 @@
+Icons: Simple Icons (CC0)
+https://github.com/simple-icons/simple-icons
+Versions: 13.21.0 / 11.15.0

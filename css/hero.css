@@ -1,0 +1,384 @@
+.hero-stage {
+  --hero-bg: #f2f2ef;
+  --color-text: #252621;
+  --color-muted: #737369;
+  --color-line: #d8d5cc;
+  --color-accent: #626b4f;
+  --hero-font: var(--font-heading);
+  --hero-title-size: clamp(32px, 3.7vw, 52px);
+  --hero-type-size: 16.4cqw;
+  --hero-tag-size: clamp(18px, 2.2cqw, 30px);
+  --hero-tag-height: clamp(44px, 4.6cqw, 64px);
+  position: relative;
+  isolation: isolate;
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(var(--header-height) + 52px);
+  border-bottom: 0;
+  overflow: hidden;
+}
+.hero-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--hero-bg);
+  z-index: -1;
+  pointer-events: none;
+}
+.hero-intro {
+  position: relative;
+  z-index: 2;
+}
+.hero-intro .eyebrow {
+  letter-spacing: 1.1px;
+}
+.hero-intro-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+.hero-intro h1 {
+  font-size: var(--hero-title-size);
+  margin-top: 22px;
+  letter-spacing: -1.8px;
+}
+.hero-intro .text-link {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+.hero-description {
+  color: var(--color-muted);
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.hero-playground {
+  container-type: inline-size;
+  position: relative;
+  width: min(1440px, 100%);
+  height: clamp(330px, 36vw, 510px);
+  overflow: visible;
+  margin: 10px auto 0;
+  isolation: isolate;
+}
+.hero-type {
+  position: absolute;
+  left: 50%;
+  bottom: 0.08em;
+  transform: translateX(-50%);
+  font-family: var(--hero-font);
+  font-size: var(--hero-type-size);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-skills {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.skill-token {
+  position: absolute;
+  left: var(--x);
+  bottom: var(--landing-bottom, calc(15.6cqw + var(--rise, 0px)));
+  height: var(--hero-tag-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: clamp(14px, 1.6cqw, 23px);
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  background: var(--hero-bg);
+  font-size: var(--hero-tag-size);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translateX(-50%) rotate(var(--tilt));
+}
+.token-figma {
+  --x: 14%;
+  --tilt: -8deg;
+  --delay: 0ms;
+}
+.token-html {
+  --x: 32%;
+  --tilt: 5deg;
+  --delay: 90ms;
+}
+.token-css {
+  --x: 50%;
+  --tilt: -5deg;
+  --delay: 180ms;
+}
+.token-vue {
+  --x: 68%;
+  --tilt: 6deg;
+  --delay: 270ms;
+}
+.token-git {
+  --x: 84%;
+  --tilt: -7deg;
+  --delay: 360ms;
+}
+.token-photoshop {
+  --x: 18%;
+  --tilt: 7deg;
+  --rise: calc(var(--hero-tag-height) + 22px);
+  --delay: 450ms;
+}
+.token-illustrator {
+  --x: 42%;
+  --tilt: -6deg;
+  --rise: calc(var(--hero-tag-height) + 22px);
+  --delay: 540ms;
+}
+.token-js {
+  --x: 66%;
+  --tilt: 5deg;
+  --rise: calc(var(--hero-tag-height) + 22px);
+  --delay: 630ms;
+}
+.token-react {
+  --x: 86%;
+  --tilt: -8deg;
+  --rise: calc(var(--hero-tag-height) + 22px);
+  --delay: 720ms;
+}
+.hero-stage.is-preparing .skill-token {
+  visibility: hidden;
+}
+@media (max-width: 600px) {
+  .hero-stage {
+    --hero-title-size: 32px;
+    --hero-tag-size: 18px;
+    --hero-tag-height: 38px;
+    padding-top: calc(var(--header-height) + 36px);
+  }
+  .hero-intro-row {
+    display: block;
+  }
+  .hero-intro h1 {
+    letter-spacing: -1.4px;
+  }
+  .hero-intro .text-link {
+    margin: 20px 0 0;
+    font-size: 12px;
+  }
+  .hero-description {
+    font-size: 12px;
+    margin-top: 18px;
+  }
+  .hero-playground {
+    height: calc(17.72vw + 300px);
+    margin-top: 0;
+  }
+  .skill-token {
+    padding-inline: 15px;
+  }
+  .token-figma {
+    --x: 30%;
+    --rise: 0px;
+  }
+  .token-html {
+    --x: 70%;
+    --rise: 0px;
+  }
+  .token-css {
+    --x: 30%;
+    --rise: 49px;
+  }
+  .token-vue {
+    --x: 70%;
+    --rise: 49px;
+  }
+  .token-git {
+    --x: 30%;
+    --rise: 98px;
+  }
+  .token-react {
+    --x: 70%;
+    --rise: 98px;
+  }
+  .token-photoshop {
+    --x: 27%;
+    --rise: 147px;
+  }
+  .token-illustrator {
+    --x: 73%;
+    --rise: 147px;
+  }
+  .token-js {
+    --x: 50%;
+    --rise: 201px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-stage.is-preparing .skill-token {
+    visibility: visible;
+  }
+}
+.skill-token[role='button'] {
+  cursor: default;
+  user-select: none;
+}
+.hero-stage.is-interactive .skill-token {
+  cursor: grab;
+  touch-action: none;
+}
+.skill-token.is-dragging {
+  cursor: grabbing;
+}
+.skill-token[role='button']:focus:not(:focus-visible),
+.skill-token.is-dragging:focus {
+  outline: none;
+}
+.skill-token.is-dragging {
+  background: var(--pill-active-bg, var(--color-text));
+  color: var(--pill-active-text, var(--hero-bg));
+  border-color: var(--pill-active-bg, var(--color-text));
+}
+
+.token-figma {
+  --pill-active-bg: #d8b3d0;
+  --pill-active-text: #252621;
+}
+.token-html {
+  --pill-active-bg: #d96a56;
+  --pill-active-text: #341a15;
+}
+.token-css {
+  --pill-active-bg: #6982c5;
+  --pill-active-text: #15213c;
+}
+.token-js {
+  --pill-active-bg: #ead181;
+  --pill-active-text: #252621;
+}
+.token-vue {
+  --pill-active-bg: #93c8b9;
+  --pill-active-text: #172d28;
+}
+.token-react {
+  --pill-active-bg: #c3e4f1;
+  --pill-active-text: #203745;
+}
+.token-photoshop {
+  --pill-active-bg: #648abe;
+  --pill-active-text: #14263f;
+}
+.token-illustrator {
+  --pill-active-bg: #e39460;
+  --pill-active-text: #251b13;
+}
+.token-git {
+  --pill-active-bg: #d76c56;
+  --pill-active-text: #341a15;
+}
+.token-jquery {
+  --x: 32%;
+  --tilt: 6deg;
+  --rise: calc(var(--hero-tag-height) * 2 + 40px);
+  --pill-active-bg: #8db9ce;
+  --pill-active-text: #152b36;
+}
+.token-python {
+  --x: 61%;
+  --tilt: -7deg;
+  --rise: calc(var(--hero-tag-height) * 2 + 40px);
+  --pill-active-bg: #e4c77c;
+  --pill-active-text: #252621;
+}
+@media (max-width: 600px) {
+  .token-jquery {
+    --x: 27%;
+    --rise: 250px;
+  }
+  .token-python {
+    --x: 73%;
+    --rise: 250px;
+  }
+  .hero-playground {
+    min-height: calc(17.72vw + 365px);
+  }
+}
+
+.skill-token {
+  font-family: var(--font-heading);
+}
+
+.skill-token {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
+}
+.skill-token.is-landing-flash {
+  background: var(--pill-active-bg, var(--color-text));
+  color: var(--pill-active-text, var(--hero-bg));
+  border-color: var(--pill-active-bg, var(--color-text));
+  transition-duration: 45ms;
+}
+.skill-token.is-dragging {
+  transition-duration: 45ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-token {
+    transition: none;
+  }
+}
+
+.skill-token.token-symbol {
+  width: var(--hero-tag-height);
+  padding: 0;
+  background: var(--symbol-color);
+  border-color: var(--symbol-color);
+  color: var(--hero-bg);
+  --pill-active-bg: var(--hero-bg);
+  --pill-active-text: var(--symbol-color);
+}
+.token-symbol svg {
+  width: 52%;
+  height: 52%;
+  pointer-events: none;
+}
+.skill-token.token-symbol.is-dragging,
+.skill-token.token-symbol.is-landing-flash {
+  background: var(--hero-bg);
+  color: var(--symbol-color);
+  border-color: var(--symbol-color);
+}
+
+.token-tool-claude {
+  --symbol-color: #d76c56;
+  --x: 22%;
+  --tilt: -8deg;
+  --rise: 80px;
+}
+.token-tool-openai {
+  --symbol-color: #415777;
+  --x: 78%;
+  --tilt: 12deg;
+  --rise: 80px;
+}
+.token-tool-notion {
+  --symbol-color: #555650;
+  --x: 42%;
+  --tilt: -5deg;
+  --rise: 150px;
+}
+.token-tool-visualstudiocode {
+  --symbol-color: #648abe;
+  --x: 87%;
+  --tilt: 8deg;
+  --rise: 150px;
+}
+.token-symbol svg {
+  width: 56%;
+  height: 56%;
+}

@@ -1,0 +1,71 @@
+.gb-motion-callouts :is(.gb-product-nav-zoom, .gb-product-gauge-zoom, .gb-seller-step-zoom) {
+  visibility: hidden;
+  scale: 1;
+  transform-origin: center;
+}
+.gb-motion-callouts.gb-motion-visible
+  :is(.gb-product-nav-zoom, .gb-product-gauge-zoom, .gb-seller-step-zoom) {
+  visibility: visible;
+  animation: gb-callout-pop 1.2s ease both;
+}
+.gb-motion-callouts
+  :is(
+    .gb-product-nav-note,
+    .gb-product-gauge-note,
+    .gb-seller-annotation,
+    .gb-ai-analysis-note,
+    .gb-ai-analysis-connector,
+    .gb-wishlist-note,
+    .gb-wishlist-arrow
+  ) {
+  opacity: 0;
+  transition: opacity 1.8s ease 0.15s;
+}
+.gb-motion-callouts.gb-motion-visible
+  :is(
+    .gb-product-nav-note,
+    .gb-product-gauge-note,
+    .gb-seller-annotation,
+    .gb-ai-analysis-note,
+    .gb-ai-analysis-connector,
+    .gb-wishlist-note,
+    .gb-wishlist-arrow
+  ) {
+  opacity: 1;
+}
+@keyframes gb-callout-pop {
+  0% {
+    scale: 0.985;
+  }
+  65% {
+    scale: 1.012;
+  }
+  85% {
+    scale: 0.998;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gb-motion-callouts
+    :is(
+      .gb-product-nav-zoom,
+      .gb-product-gauge-zoom,
+      .gb-seller-step-zoom,
+      .gb-product-nav-note,
+      .gb-product-gauge-note,
+      .gb-seller-annotation,
+      .gb-ai-analysis-note,
+      .gb-ai-analysis-connector,
+      .gb-wishlist-note,
+      .gb-wishlist-arrow
+    ) {
+    opacity: 1;
+    visibility: visible;
+    translate: none;
+    scale: none;
+    animation: none;
+    transition: none;
+  }
+}

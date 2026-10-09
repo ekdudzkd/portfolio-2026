@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="디자인을 이해하고 웹으로 구현하는 웹 퍼블리셔 · UI/UX 디자이너 포트폴리오"
+    />
+    <title>Dayoung's Web Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css?v=pretendard-local" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <script src="js/pill-physics.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="포트폴리오 홈">Dayoung's Web Portfolio</a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          메뉴
+        </button>
+        <nav id="primary-nav" aria-label="주 메뉴">
+          <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a
+          ><a href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero hero-stage" aria-labelledby="hero-title">
+        <div class="container hero-intro">
+          <p class="eyebrow">UI/UX Designer · Web Publisher</p>
+          <div class="hero-intro-row">
+            <h1 id="hero-title">
+              디자인을 이해하고,<br />웹으로 <span class="accent">구현합니다.</span>
+            </h1>
+          </div>
+          <p class="hero-description">
+            시각적인 균형에서 사용자의 흐름까지.<br />디자인과 코드 사이를 연결합니다.
+          </p>
+        </div>
+        <div class="hero-playground">
+          <ul class="hero-skills" aria-label="활용 기술">
+            <li class="skill-token token-figma">Figma</li>
+            <li class="skill-token token-html">HTML5</li>
+            <li class="skill-token token-css">CSS3</li>
+            <li class="skill-token token-js">JavaScript</li>
+            <li class="skill-token token-vue">Vue</li>
+            <li class="skill-token token-react">React</li>
+            <li class="skill-token token-photoshop">Photoshop</li>
+            <li class="skill-token token-illustrator">Illustrator</li>
+            <li class="skill-token token-git">Git</li>
+            <li class="skill-token token-jquery">jQuery</li>
+            <li class="skill-token token-python">Python</li>
+            <li class="skill-token token-symbol token-tool-claude" data-token-label="Claude">
+              <svg
+                aria-hidden="true"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"
+                />
+              </svg>
+            </li>
+            <li class="skill-token token-symbol token-tool-openai" data-token-label="GPT">
+              <svg
+                aria-hidden="true"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
+                />
+              </svg>
+            </li>
+            <li class="skill-token token-symbol token-tool-notion" data-token-label="Notion">
+              <svg
+                aria-hidden="true"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"
+                />
+              </svg>
+            </li>
+            <li
+              class="skill-token token-symbol token-tool-visualstudiocode"
+              data-token-label="VS Code"
+            >
+              <svg
+                aria-hidden="true"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"
+                />
+              </svg>
+            </li>
+          </ul>
+          <div class="hero-type" aria-hidden="true">PORTFOLIO</div>
+        </div>
+      </section>
+      <section class="section container" id="about" aria-labelledby="about-title">
+        <div class="about-intro">
+          <div class="section-heading">
+            <p class="eyebrow">01 / ABOUT</p>
+            <h2 id="about-title">안녕하세요,<br />강다영입니다.</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              디자인을 전공하고, 웹 퍼블리셔·UI/UX 디자이너로 성장하기 위해 삼성청년 SW·AI
+              아카데미에서 코드를 배우며 다양한 프로젝트를 경험하고 있습니다. Adobe와 Figma를 활용한
+              디자인부터 와이어프레임, 프로토타입 제작까지 작업합니다.
+            </p>
+            <p>
+              Git으로 코드 변경 사항을 공유하고, 백엔드·AI 담당 팀원들과 API 연동과 화면 구현을
+              조율하며 협업했습니다.
+            </p>
+            <p>
+              Codex·Claude Code와 Jira·Figma의 MCP 연동을 활용해 자료 정리와 반복 업무를
+              자동화합니다. AI로 효율을 높이되, 결과를 직접 검토하고 최종 판단을 내려 작업물의
+              완성도를 지킵니다.
+            </p>
+            <p>
+              프로젝트를 통해 배운 내용을 실제 작업에 적용하고, 더 나은 화면을 만들기 위해 꾸준히
+              배우고 개선해 나가겠습니다.
+            </p>
+          </div>
+        </div>
+        <section class="about-timeline-space" aria-labelledby="timeline-title">
+          <div class="timeline-heading">
+            <h3 id="timeline-title">Experience Timeline</h3>
+            <p>디자인에서 웹으로 이어지는 경험</p>
+          </div>
+          <ul class="timeline-legend" aria-label="이력 분류">
+            <li class="timeline-education">학업</li>
+            <li class="timeline-activity">활동 / 교육</li>
+            <li class="timeline-work">실무</li>
+            <li class="timeline-award">수상</li>
+            <li class="timeline-certificate">자격 / 시험</li>
+          </ul>
+          <div
+            class="timeline-scroll"
+            role="region"
+            aria-label="2019년부터 2026년까지의 이력 타임라인"
+          >
+            <div class="timeline-chart">
+              <div class="timeline-now" aria-hidden="true">
+                <span class="timeline-now-label">현재</span>
+              </div>
+              <div class="timeline-axis" aria-hidden="true">
+                <div class="timeline-years">
+                  <span>2019</span><span>2020</span><span>2021</span><span>2022</span
+                  ><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+                </div>
+              </div>
+              <ol class="timeline-entries">
+                <li
+                  class="timeline-row timeline-education"
+                  style="--start: 0%; --duration: 64.58333%; --lane: 0"
+                >
+                  <span class="timeline-bar" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>상명대학교 텍스타일디자인</h4>
+                    <p>2019.03 – 2024.02</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-education"
+                  style="--start: 33.33333%; --duration: 9.375%; --lane: 1"
+                >
+                  <span class="timeline-bar" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>University of Wisconsin 정규교환학생</h4>
+                    <p>2021.09 – 2022.05</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-activity"
+                  style="--start: 52.08333%; --duration: 10.41667%; --lane: 2"
+                >
+                  <span class="timeline-bar" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>Club-C 동아리장</h4>
+                    <p>2023.03 – 2023.12</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-work"
+                  style="--start: 77.08333%; --duration: 9.375%; --lane: 3"
+                >
+                  <span class="timeline-bar" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>노브랜드(주) 디자인팀 인턴</h4>
+                    <p>2025.03 – 2025.11</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-activity"
+                  style="--start: 87.5%; --duration: 12.5%; --lane: 4"
+                >
+                  <span class="timeline-bar timeline-current" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>삼성청년 SW·AI 아카데미</h4>
+                    <p>2026.01 – 현재</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-certificate"
+                  style="--start: 18.75%; --duration: 1.04167%; --lane: 5"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>그래픽기술자격(GTQ) 1급</h4>
+                    <p>2020.07</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-award"
+                  style="--start: 18.75%; --duration: 1.04167%; --lane: 6"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>제 25회 국제디자인트렌드대전 특선</h4>
+                    <p>2020.07</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-award"
+                  style="--start: 56.25%; --duration: 1.04167%; --lane: 7"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>제 28회 국제디자인트렌드대전 동상</h4>
+                    <p>2023.07</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-award"
+                  style="--start: 61.45833%; --duration: 1.04167%; --lane: 8"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>서울 도시브랜드 굿즈 디자인 공모전 우수상</h4>
+                    <p>2023.12</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-certificate"
+                  style="--start: 92.70833%; --duration: 1.04167%; --lane: 9"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>정보처리기사 필기</h4>
+                    <p>2026.06</p>
+                  </div>
+                </li>
+                <li
+                  class="timeline-row timeline-certificate timeline-label-extended"
+                  style="--start: 96.875%; --duration: 1.04167%; --lane: 10"
+                >
+                  <span class="timeline-event" aria-hidden="true"></span>
+                  <div class="timeline-label">
+                    <h4>웹디자인개발기능사 필기</h4>
+                    <p>2026.10</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="projects-section" id="projects" aria-label="프로젝트">
+        <div class="container">
+          <div class="section-top"><p class="eyebrow">02 / SELECTED PROJECTS</p></div>
+          <div class="project-grid project-grid-equal">
+            <a class="project" href="project-groupbuy.html"
+              ><div class="secondary-media project-thumbnail project-thumbnail-groupbuy">
+                <img
+                  src="assets/images/projects/01_group-buying/thumbnail-banner.webp"
+                  alt="공구한 공동구매 장바구니 배너"
+                  width="1954"
+                  height="805"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="groupbuy-thumbnail-copy">
+                  <strong>이거 어디서 샀어?<br />이거 <span>공구한</span> 건데</strong>
+                  <p>필요한 사람끼리 모여 더 싸게,<br />결제는 에스크로로 안전하게</p>
+                </div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <p class="eyebrow">WEB SERVICE</p>
+                  <h3>공구한</h3>
+                  <p>상품 탐색부터 주문, 판매자 관리까지 이어지는 웹 서비스</p>
+                  <ul class="tags" aria-label="기술 및 담당 영역">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>UI/UX</li>
+                    <li>Web Publishing</li>
+                  </ul>
+                </div>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div></a
+            ><a class="project" href="project-family.html"
+              ><div class="secondary-media project-thumbnail project-thumbnail-family">
+                <img
+                  src="assets/images/projects/03_familink/thumbnail-cover.png"
+                  alt="패밀링크 가족 소통 서비스: 부모님과 보호자 캐릭터"
+                  width="1448"
+                  height="1086"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-info">
+                <div>
+                  <p class="eyebrow">MOBILE APP</p>
+                  <h3>Familink</h3>
+                  <p>시니어를 고려한 가족 커뮤니케이션 서비스</p>
+                  <ul class="tags">
+                    <li>React Native</li>
+                    <li>Kotlin</li>
+                    <li>Mobile UI/UX</li>
+                  </ul>
+                </div>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div></a
+            ><a class="project" href="project-matching.html"
+              ><div class="secondary-media blind-thumbnail">
+                <div class="blind-thumbnail-copy">
+                  <strong>Blind<br />Dating</strong>
+                  <span>당신의 인연을 찾아요</span>
+                </div>
+                <img
+                  class="blind-thumbnail-avatar"
+                  src="assets/images/projects/02_blind-dating/screenshots/avatar_end.png"
+                  alt="AI가 생성한 프로필 아바타"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="blind-thumbnail-matching"
+                  src="assets/images/projects/02_blind-dating/screenshots/matching.png"
+                  alt="취향 기반 상대 추천 화면"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-info">
+                <div>
+                  <p class="eyebrow">AI MATCHING</p>
+                  <h3>Blind Dating</h3>
+                  <p>AI 기반 추천 서비스</p>
+                  <ul class="tags">
+                    <li>Vue</li>
+                    <li>Django</li>
+                    <li>UI/UX</li>
+                  </ul>
+                </div>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / SKILLS & TOOLS</p>
+          <h2 id="skills-title">설계부터 구현까지.</h2>
+        </div>
+        <div class="section-body skill-list">
+          <div>
+            <h3>Design</h3>
+            <p>Photoshop · Illustrator · Figma</p>
+            <span
+              >Adobe Photoshop·Illustrator로 그래픽 작업을 하고, Figma로 와이어프레임과 프로토타입을
+              제작합니다.</span
+            >
+          </div>
+          <div>
+            <h3>Publishing</h3>
+            <p>HTML · CSS · JavaScript · Responsive Web</p>
+            <span
+              >HTML·CSS·JavaScript로 디자인을 웹 화면으로 구현합니다. 화면 크기에 따라 레이아웃을
+              조정하고 인터랙션을 연결합니다.</span
+            >
+          </div>
+          <div>
+            <h3>Framework Experience</h3>
+            <p>Vue · React</p>
+            <span
+              >Vue·React 기반 팀 프로젝트에 참여하며 서비스 화면과 컴포넌트 구성 흐름을 접했습니다.
+              프레임워크의 세부 구현은 학습 중입니다.</span
+            >
+          </div>
+          <div>
+            <h3>Collaboration &amp; AI</h3>
+            <p>Git · Jira · AI Agents · MCP</p>
+            <span
+              >Git으로 변경 사항을 공유하고 Jira로 작업을 관리합니다. AI 에이전트와 MCP 연동으로
+              자료 정리와 반복 업무를 줄입니다.</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="process-section" id="collaboration" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-top">
+            <div>
+              <p class="eyebrow">04 / WORK PROCESS</p>
+              <h2 id="process-title">함께 만들고, 더 나은 방향으로.</h2>
+            </div>
+          </div>
+          <div class="process-graph" aria-hidden="true">
+            <svg viewBox="0 0 1160 140" fill="none" preserveAspectRatio="none">
+              <path class="graph-purple" d="M0 108H1160" />
+              <path
+                class="graph-green"
+                d="M100 108C145 108 145 62 190 62H365C410 62 410 108 455 108"
+              />
+              <path
+                class="graph-magenta"
+                d="M215 108C270 108 255 24 320 24H640C700 24 680 108 740 108H1160"
+              />
+              <path
+                class="graph-mint"
+                d="M480 108C535 108 520 76 580 76H930C985 76 970 108 1025 108"
+              />
+              <path
+                class="graph-red"
+                d="M680 108C750 108 715 44 790 44H1035C1090 44 1060 108 1120 108"
+              />
+              <g class="graph-purple">
+                <circle cx="100" cy="108" r="5" />
+                <circle cx="215" cy="108" r="5" />
+                <circle cx="455" cy="108" r="5" />
+                <circle cx="480" cy="108" r="5" />
+                <circle cx="680" cy="108" r="5" />
+                <circle cx="740" cy="108" r="5" />
+                <circle cx="1025" cy="108" r="5" />
+                <circle cx="1120" cy="108" r="5" />
+              </g>
+              <g class="graph-green">
+                <circle cx="270" cy="62" r="5" />
+                <circle cx="350" cy="62" r="5" />
+              </g>
+              <g class="graph-magenta">
+                <circle cx="425" cy="24" r="5" />
+                <circle cx="590" cy="24" r="5" />
+              </g>
+              <g class="graph-mint">
+                <circle cx="665" cy="76" r="5" />
+                <circle cx="855" cy="76" r="5" />
+              </g>
+              <g class="graph-red"><circle cx="945" cy="44" r="5" /></g>
+            </svg>
+          </div>
+          <ol class="process-grid">
+            <li>
+              <span class="eyebrow">01 / UNDERSTAND</span>
+              <h3>요구사항 정리</h3>
+              <p>필요한 화면과 기능을 정리하고, 팀원들과 우선순위와 담당 범위를 맞춥니다.</p>
+            </li>
+            <li>
+              <span class="eyebrow">02 / DESIGN</span>
+              <h3>화면 흐름 검토</h3>
+              <p>사용자가 다음 행동을 쉽게 찾을 수 있도록 정보와 화면의 순서를 구성합니다.</p>
+            </li>
+            <li>
+              <span class="eyebrow">03 / BUILD</span>
+              <h3>구현 방향 조율</h3>
+              <p>디자인 의도를 공유하고, API와 구현 여건에 맞춰 화면을 조정합니다.</p>
+            </li>
+            <li>
+              <span class="eyebrow">04 / SHARE</span>
+              <h3>피드백과 개선</h3>
+              <p>완성된 화면을 함께 확인하고, 피드백을 반영해 수정합니다.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="contact container" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">05 / CONTACT</p>
+        <p class="contact-subtitle">함께 일할 디자이너 겸 코더, 여기 있습니다.</p>
+        <h2 id="contact-title"><a href="mailto:kdyarchive@naver.com">kdyarchive@naver.com</a></h2>
+      </section>
+    </main>
+    <footer class="site-footer container">
+      <span>© <span data-year>2026</span> Portfolio</span
+      ><span>Designed & Published with care.</span><a href="#main">맨 위로 ↑</a>
+    </footer>
+  </body>
+</html>
