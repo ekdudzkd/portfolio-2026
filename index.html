@@ -9,7 +9,7 @@
     />
     <title>Dayoung's Web Portfolio</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css?v=pretendard-local" />
+    <link rel="stylesheet" href="css/common.css?v=grouped-graphics-20261026" />
     <link rel="stylesheet" href="css/hero.css" />
     <script src="js/pill-physics.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -382,9 +382,22 @@
                 <span class="project-arrow" aria-hidden="true">↗</span>
               </div></a
             >
+          <button class="project graphic-work" type="button" data-graphic-group="forest" aria-haspopup="dialog">
+            <div class="graphic-work-image"><img src="assets/images/projects/04_etc/posters-thumb.webp" alt="산림치유지도사 양성과정 홍보 포스터 목업" loading="lazy" /></div>
+            <div class="graphic-work-copy"><span>POSTER · BANNER</span><h3>교육 프로그램 홍보물</h3><p>교육 일정과 모집 정보를 담은 포스터와 배너</p><span class="graphic-work-open">작업 보기 ↗</span></div>
+          </button>
+          <button class="project graphic-work" type="button" data-graphic-group="promotion" aria-haspopup="dialog">
+            <div class="graphic-work-image"><img src="assets/images/projects/04_etc/table_tent-thumb.webp" alt="SSAFY 제휴 프로모션 테이블 텐트 목업" loading="lazy" /></div>
+            <div class="graphic-work-copy"><span>PROMOTION · FLYER · BUSINESS CARD</span><h3>SSAFY 제휴 · 홍보 디자인</h3><p>프로모션, 안내 자료와 명함 디자인</p><span class="graphic-work-open">작업 보기 ↗</span></div>
+          </button>
           </div>
         </div>
       </section>
+      <dialog class="graphic-dialog" aria-labelledby="graphic-dialog-title">
+        <div class="graphic-dialog-header"><h2 id="graphic-dialog-title"></h2><button type="button" class="graphic-dialog-close">닫기 ×</button></div>
+        <div class="graphic-dialog-stage"></div>
+      </dialog>
+      <script src="js/graphic-works.js?v=grouped" defer></script>
       <section class="section container" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="eyebrow">03 / SKILLS & TOOLS</p>

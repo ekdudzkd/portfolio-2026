@@ -1295,3 +1295,41 @@ h3 {
   z-index: 1;
   transform: rotate(7deg);
 }
+.graphic-work { padding: 0; border: 0; background: transparent; text-align: left; color: inherit; font: inherit; cursor: pointer; min-width: 0; }
+.graphic-work-image { height: 320px; overflow: hidden; background: #f3f3f2; }
+.graphic-work-image img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s ease; }
+.graphic-work:hover img { transform: scale(1.035); }
+.graphic-work-copy { position: relative; padding: 22px 0 0; }
+.graphic-work-copy > span:first-child { font-size: 10px; letter-spacing: .09em; color: var(--color-muted); }
+.graphic-work-copy h3 { margin: 6px 0; font-size: 21px; letter-spacing: -.03em; }
+.graphic-work-copy p { color: var(--color-muted); font-size: 13px; padding-right: 85px; }
+.graphic-work-open { position: absolute; right: 0; bottom: 0; font-size: 12px; }
+.graphic-dialog { width: min(1100px, calc(100vw - 40px)); max-height: 90svh; padding: 26px; border: 0; border-radius: 16px; color: var(--color-text); }
+.graphic-dialog::backdrop { background: rgba(25, 25, 30, .65); }
+.graphic-dialog-header { position: sticky; top: -26px; z-index: 1; padding-block: 16px; background: white; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.graphic-dialog-header h2 { font-size: 20px; }
+.graphic-dialog-close { border: 0; background: transparent; cursor: pointer; font: inherit; white-space: nowrap; }
+.graphic-dialog-stage { background: #f5f5f3; padding: 20px; text-align: center; }
+.graphic-dialog-stage img { display: block; max-width: 100%; width: 100%; height: auto; margin: auto; object-fit: contain; }
+.graphic-dialog-section + .graphic-dialog-section { margin-top: 72px; padding-top: 40px; border-top: 1px solid #deded9; }
+.graphic-dialog-section h3 { margin: 10px 0 28px; font-size: 22px; }
+.graphic-dialog-row { margin-bottom: 36px; }
+.graphic-dialog-row:last-child { margin-bottom: 0; }
+.graphic-dialog-stage figure { margin: 0; min-width: 0; }
+.graphic-dialog-original-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 660px; margin-inline: auto; }
+.graphic-dialog-original { max-width: 320px; margin-inline: auto; }
+.graphic-dialog-mockup { max-width: 960px; margin-inline: auto; }
+.graphic-dialog-banner-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 40px; max-width: 800px; margin-inline: auto; }
+.graphic-dialog-banner-pair figure:first-child img { width: 75%; }
+.graphic-dialog-stage figcaption { margin-top: 14px; color: var(--color-muted); font-size: 12px; text-align: center; }
+@media (max-width: 650px) {
+ .graphic-work-image { height: 280px; }
+ .graphic-dialog { padding: 18px; }
+ .graphic-dialog-stage { padding: 8px; }
+ .graphic-dialog-header { top: -18px; }
+ .graphic-dialog-header h2 { font-size: 17px; }
+ .graphic-dialog-original-pair { gap: 14px; }
+ .graphic-dialog-banner-pair { gap: 16px; }
+ .graphic-dialog-section h3 { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .graphic-work-image img { transition: none; } }
