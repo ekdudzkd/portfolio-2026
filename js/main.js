@@ -414,7 +414,7 @@ if (aboutSection) {
 }
 
 const timelineEntries = document.querySelector('.timeline-entries');
-if (timelineEntries) {
+if (timelineEntries && !timelineEntries.closest('[hidden]')) {
   const layoutTimeline = () => {
     const width = timelineEntries.clientWidth;
     const occupied = [];
